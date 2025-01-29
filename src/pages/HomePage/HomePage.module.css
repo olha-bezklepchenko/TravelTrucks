@@ -1,0 +1,41 @@
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../../assets/images/camper.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 696px;
+  width: 1440px;
+  margin: 0 auto;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx),
+  (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url(../../assets/images/camper@2x.jpg);
+  }
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  width: 571px;
+  height: 696px;
+  justify-content: center;
+  color: #f7f7f7;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 0.67;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  margin-bottom: 40px;
+}

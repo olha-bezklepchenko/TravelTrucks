@@ -1,0 +1,31 @@
+.navButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  outline: transparent;
+  border-radius: 200px;
+  padding: 16px 0;
+  height: 56px;
+  border: none;
+  background-color: #e44848;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  transition: all 350ms linear;
+}
+
+.navButton:hover,
+.navButton:focus {
+  background-color: #d84343;
+}
+
+.small {
+  width: 166px;
+}
+
+.large {
+  width: 173px;
+}
