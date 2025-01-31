@@ -1,0 +1,91 @@
+.imageWrapper {
+  width: 292px;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.infoTop {
+  width: 524px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  margin-right: 13px;
+}
+
+.favorite {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.favorite.active,
+.favorite:hover,
+.favorite:active {
+  fill: #e44848;
+}
+
+.infoBottom {
+  display: flex;
+  gap: 16px;
+}
+
+.infoBottomItem {
+  display: flex;
+  gap: 4px;
+  font-weight: 400;
+}
+
+.infoBottomItem:first-child {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.iconStar {
+  fill: #ffc531;
+}
+
+.iconMap {
+  fill: #101828;
+}
+
+.description {
+  width: 500px;
+  font-weight: 400;
+  color: #475467;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

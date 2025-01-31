@@ -28,120 +28,23 @@
   height: 368px;
 }
 
-.imageWrapper {
-  width: 292px;
-  height: 320px;
-  overflow: hidden;
-  border-radius: 10px;
-  flex-shrink: 0;
-}
-
-.image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 10px;
-}
-
-.infoWrapper {
+.loadMoreBtn {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
-  width: 100%;
-}
-
-.infoTop {
-  width: 524px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-}
-
-.title {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.33;
-  flex-grow: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.price {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.33;
-  margin-right: 13px;
-}
-
-.favorite {
-  background: none;
-  border: none;
+  align-items: center;
+  justify-content: center;
+  width: 145px;
+  height: 56px;
+  margin: 40px auto 0;
+  padding: 16px 0;
+  border-radius: 200px;
+  border: 1px solid #dadde1;
+  background-color: transparent;
+  letter-spacing: -0.01em;
   cursor: pointer;
+  transition: all 350ms linear;
 }
 
-.favorite.active,
-.favorite:hover,
-.favorite:active {
-  fill: #e44848;
-}
-
-.infoBottom {
-  display: flex;
-  gap: 16px;
-}
-
-.infoBottomItem {
-  display: flex;
-  gap: 4px;
-  font-weight: 400;
-}
-
-.infoBottomItem:first-child {
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-}
-
-.iconStar {
-  fill: #ffc531;
-}
-
-.iconMap {
-  fill: #101828;
-}
-
-.description {
-  width: 500px;
-  font-weight: 400;
-  color: #475467;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.vehicleList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  max-height: 104px;
-  overflow: hidden;
-}
-
-.vehicleItem {
-  display: flex;
-  gap: 8px;
-  padding: 12px 18px;
-  border-radius: 100px;
-  height: 48px;
-  background-color: #f2f4f7;
-}
-
-.vehicleText {
-  text-transform: capitalize;
-}
-
-.vehicleIconStroke {
-  stroke: #101828;
-  fill: none;
+.loadMoreBtn:hover,
+.loadMoreBtn:active {
+  border-color: #d84343;
 }
