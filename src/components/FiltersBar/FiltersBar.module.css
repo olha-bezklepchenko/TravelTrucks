@@ -1,0 +1,148 @@
+.locationWrapper {
+  position: relative;
+  height: 88px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.locationLabel {
+  font-weight: 400;
+  color: #6c717b;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  height: 100%;
+}
+
+.locationInput {
+  border-radius: 12px;
+  padding: 16px 20px 16px 48px;
+  width: 360px;
+  height: 56px;
+  border: none;
+  background-color: #f7f7f7;
+}
+
+.locationInput:placeholder-shown + .btnMap {
+  transition: all 350ms linear;
+  fill: #6c717b;
+}
+
+.locationInput:placeholder-shown + .btnMap:hover {
+  fill: #101828;
+  scale: 1.2;
+}
+
+.btnMap {
+  position: absolute;
+  bottom: 18px;
+  left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  transition: all 350ms linear;
+  fill: #101828;
+}
+
+.btnMap:hover,
+.btnMap:focus {
+  fill: #d84343;
+  scale: 1.2;
+}
+
+.locationList {
+  position: absolute;
+  z-index: 9;
+  border-radius: 12px;
+  padding: 0px 20px 16px 30px;
+  width: 360px;
+  border: none;
+  background-color: #f7f7f7;
+  height: 88px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.locationList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.locationList::-webkit-scrollbar-thumb {
+  background-color: #6c717b;
+  border-radius: 10px;
+  border: 2px solid #f7f7f7;
+}
+
+.locationList::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.locationItem:hover {
+  color: #d84343;
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  color: #475467;
+  margin-bottom: 32px;
+}
+.vehicleBox {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.titleGroup {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.groupList {
+  border-top: 1px solid #dadde1;
+  padding-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.groupItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 112px;
+  height: 96px;
+  border: 1px solid #dadde1;
+  border-radius: 12px;
+  transition: all 350ms linear;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.groupItem:hover,
+.groupItem:focus,
+.groupItem:active {
+  border-color: #e44848;
+}
+
+.checkbox,
+.radio {
+  display: none;
+}
+
+.checked {
+  border-color: #e44848;
+}

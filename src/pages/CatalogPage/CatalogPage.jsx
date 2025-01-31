@@ -1,5 +1,5 @@
 import Container from "../../components/Container/Container";
-import Filters from "../../components/Filters/Filters";
+import FiltersBar from "../../components/FiltersBar/FiltersBar";
 import CampersList from "../../components/CampersList/CampersList";
 import css from "./CatalogPage.module.css";
 import { fetchCampers } from "../../redux/campers/operations";
@@ -17,7 +17,7 @@ const CatalogPage = () => {
     <div className={css.pageWrapper}>
       <Container>
         <div className={css.gridContainer}>
-          <Filters />
+          <FiltersBar />
           <CampersList />
         </div>
       </Container>

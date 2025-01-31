@@ -15,7 +15,7 @@ const campersSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchCampers.fulfilled, (state, action) => {
-        state.items = action.payload;
+        state.items = action.payload.items;
       })
       .addCase(fetchCamperById.fulfilled, (state, action) => {
         state.currentCamper = action.payload;
