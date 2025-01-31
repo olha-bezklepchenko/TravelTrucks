@@ -1,0 +1,9 @@
+.pageWrapper {
+  padding: 48px 0 52px 0;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 360px 888px;
+  column-gap: 64px;
+}
