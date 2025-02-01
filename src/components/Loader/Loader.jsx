@@ -5,9 +5,9 @@ const Loader = () => {
   return (
     <div className={css.loader}>
       <Circles
-        height="80"
-        width="80"
-        color="#FFC531"
+        height="60"
+        width="60"
+        color="#DADDE1"
         ariaLabel="circles-loading"
         wrapperStyle={{}}
         wrapperClass=""

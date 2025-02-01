@@ -1,0 +1,11 @@
+.favorite {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.favorite.active,
+.favorite:hover,
+.favorite:active {
+  fill: #e44848;
+}

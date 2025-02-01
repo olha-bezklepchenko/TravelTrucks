@@ -1,23 +1,12 @@
 import css from "./CamperItem.module.css";
 
-import { useState } from "react";
 import NavButton from "../NavButton/NavButton";
 import Icon from "../../helpers/Icon/Icon";
-import clsx from "clsx";
+
 import VehicleList from "../VehicleList/VehicleList";
+import FavoriteButton from "../FavoriteButton/FavoriteButton";
 
 const CamperItem = ({ camper }) => {
-  // тимчасово ----------------------------
-  const [favorites, setFavorites] = useState({});
-
-  const toggleFavorite = (id) => {
-    setFavorites((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }));
-  };
-  // ----------------------------------------тимчасово
-
   return (
     <>
       <div className={css.imageWrapper}>
@@ -32,20 +21,7 @@ const CamperItem = ({ camper }) => {
           <div className={css.infoTop}>
             <h3 className={css.title}>{camper.name}</h3>
             <p className={css.price}> &#8364;{camper.price}</p>
-            <button
-              type="button"
-              onClick={() => toggleFavorite(camper.id)}
-              className={clsx(css.favorite, {
-                [css.active]: favorites[camper.id],
-              })}
-            >
-              <Icon
-                id="icon-heart"
-                w="25"
-                h="24"
-                className={css.favoriteIcon}
-              />
-            </button>
+            <FavoriteButton id={camper.id} />
           </div>
           <div className={css.infoBottom}>
             <div className={css.infoBottomItem}>
