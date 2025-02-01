@@ -59,7 +59,7 @@
   position: absolute;
   z-index: 9;
   border-radius: 12px;
-  padding: 0px 20px 16px 30px;
+  padding: 0px 20px 16px 28px;
   width: 360px;
   border: none;
   background-color: #f7f7f7;
@@ -118,23 +118,26 @@
 }
 
 .groupItem {
+  width: 112px;
+  height: 96px;
+}
+
+.label {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  width: 112px;
-  height: 96px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
   border: 1px solid #dadde1;
   border-radius: 12px;
   transition: all 350ms linear;
   cursor: pointer;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
-.groupItem:hover,
-.groupItem:focus,
-.groupItem:active {
+.label:hover {
   border-color: #e44848;
 }
 
@@ -143,6 +146,7 @@
   display: none;
 }
 
-.checked {
+.checkbox:checked + .label,
+.radio:checked + .label {
   border-color: #e44848;
 }

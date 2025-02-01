@@ -54,7 +54,7 @@ const FiltersBar = () => {
               </label>
 
               {showLocations && (
-                <options className={css.locationList}>
+                <div className={css.locationList}>
                   {locations.map((loc) => (
                     <li
                       className={css.locationItem}
@@ -64,7 +64,7 @@ const FiltersBar = () => {
                       {loc}
                     </li>
                   ))}
-                </options>
+                </div>
               )}
             </div>
             <h4 className={css.subtitle}>Filters</h4>
@@ -72,62 +72,67 @@ const FiltersBar = () => {
               <div>
                 <h3 className={css.titleGroup}>Vehicle equipment</h3>
                 <ul className={css.groupList}>
-                  <li>
-                    <label className={css.groupItem}>
-                      <Field
-                        type="checkbox"
-                        name="features"
-                        value="AC"
-                        className={css.checkbox}
-                      />
+                  <li className={css.groupItem}>
+                    <Field
+                      type="checkbox"
+                      name="features"
+                      value="AC"
+                      id="AC"
+                      className={css.checkbox}
+                    />
+                    <label htmlFor="AC" className={css.label}>
                       <Icon id="icon-wind" w="32" h="32" />
                       <p>AC</p>
                     </label>
                   </li>
-                  <li>
-                    <label className={css.groupItem}>
-                      <Field
-                        type="checkbox"
-                        name="features"
-                        value="refrigerator"
-                        className={css.checkbox}
-                      />
+                  <li className={css.groupItem}>
+                    <Field
+                      type="checkbox"
+                      name="features"
+                      value="refrigerator"
+                      id="refrigerator"
+                      className={css.checkbox}
+                    />
+                    <label htmlFor="refrigerator" className={css.label}>
                       <Icon id="icon-fridge" w="32" h="32" />
                       <p>Refrigerator</p>
                     </label>
                   </li>
-                  <li>
-                    <label className={css.groupItem}>
-                      <Field
-                        type="checkbox"
-                        name="features"
-                        value="kitchen"
-                        className={css.checkbox}
-                      />
+                  <li className={css.groupItem}>
+                    <Field
+                      type="checkbox"
+                      name="features"
+                      value="kitchen"
+                      id="kitchen"
+                      className={css.checkbox}
+                    />
+                    <label htmlFor="kitchen" className={css.label}>
                       <Icon id="icon-cup" w="32" h="32" />
                       <p> Kitchen</p>
                     </label>
                   </li>
-                  <li>
-                    <label className={css.groupItem}>
-                      <Field
-                        type="checkbox"
-                        name="features"
-                        value="TV"
-                        className={css.checkbox}
-                      />
+                  <li className={css.groupItem}>
+                    <Field
+                      type="checkbox"
+                      name="features"
+                      value="TV"
+                      id="TV"
+                      className={css.checkbox}
+                    />
+                    <label htmlFor="TV" className={css.label}>
                       <Icon id="icon-tv" w="32" h="32" />
                       <p>TV</p>
                     </label>
                   </li>
-                  <li>
-                    <label className={css.groupItem}>
-                      <Field
-                        type="checkbox"
-                        name="features"
-                        value="bathroom"
-                        className={css.checkbox}
-                      />
+                  <li className={css.groupItem}>
+                    <Field
+                      type="checkbox"
+                      name="features"
+                      value="bathroom"
+                      id="bathroom"
+                      className={css.checkbox}
+                    />
+                    <label htmlFor="bathroom" className={css.label}>
                       <Icon id="icon-shower" w="32" h="32" />
                       <p>Bathroom</p>
                     </label>
@@ -137,38 +142,41 @@ const FiltersBar = () => {
               <div>
                 <h3 className={css.titleGroup}>Vehicle type</h3>
                 <ul className={css.groupList}>
-                  <li>
-                    <label className={css.groupItem}>
-                      <Field
-                        type="radio"
-                        name="form"
-                        value="panelTruck"
-                        className={css.radio}
-                      />
+                  <li className={css.groupItem}>
+                    <Field
+                      type="radio"
+                      name="form"
+                      value="panelTruck"
+                      id="panelTruck"
+                      className={css.radio}
+                    />
+                    <label htmlFor="panelTruck" className={css.label}>
                       <Icon id="icon-grid1x2" w="32" h="32" />
                       <p>Van</p>
                     </label>
                   </li>
-                  <li>
-                    <label className={css.groupItem}>
-                      <Field
-                        type="radio"
-                        name="form"
-                        value="fullyIntegrated"
-                        className={css.radio}
-                      />
+                  <li className={css.groupItem}>
+                    <Field
+                      type="radio"
+                      name="form"
+                      value="fullyIntegrated"
+                      id="fullyIntegrated"
+                      className={css.radio}
+                    />
+                    <label htmlFor="fullyIntegrated" className={css.label}>
                       <Icon id="icon-grid-2x2" w="32" h="32" />
                       <p>Fully Integrated</p>
                     </label>
                   </li>
-                  <li>
-                    <label className={css.groupItem}>
-                      <Field
-                        type="radio"
-                        name="form"
-                        value="alcove"
-                        className={css.radio}
-                      />
+                  <li className={css.groupItem}>
+                    <Field
+                      type="radio"
+                      name="form"
+                      value="alcove"
+                      id="alcove"
+                      className={css.radio}
+                    />
+                    <label htmlFor="alcove" className={css.label}>
                       <Icon id="icon-grid-3x3" w="32" h="32" />
                       <p>Alcove</p>
                     </label>
