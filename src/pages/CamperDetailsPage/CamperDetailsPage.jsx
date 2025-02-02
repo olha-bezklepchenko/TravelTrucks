@@ -1,7 +1,7 @@
 import { Suspense, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCamperById } from "../../redux/campers/operations";
-import { Outlet, useParams } from "react-router-dom";
+import { NavLink, Outlet, useParams } from "react-router-dom";
 import {
   selectCamperById,
   selectIsError,
@@ -12,6 +12,7 @@ import Container from "../../components/Container/Container";
 import Loader from "../../components/Loader/Loader";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import CamperDetails from "../../components/CamperDetails/CamperDetails";
+import CamperBookingForm from "../../components/CamperBookingForm/CamperBookingForm";
 
 const CamperDetailsPage = () => {
   const dispatch = useDispatch();
@@ -35,9 +36,26 @@ const CamperDetailsPage = () => {
           />
         )}
         {camper && <CamperDetails camper={camper} />}
-        <Suspense fallback={<Loader />}>
-          <Outlet />
-        </Suspense>
+        <div className={css.nav}>
+          <NavLink
+            to="features"
+            className={({ isActive }) => (isActive ? css.active : css.link)}
+          >
+            Features
+          </NavLink>
+          <NavLink
+            to="reviews"
+            className={({ isActive }) => (isActive ? css.active : css.link)}
+          >
+            Reviews
+          </NavLink>
+        </div>
+        <div className={css.gridContainer}>
+          <Suspense fallback={<Loader />}>
+            <Outlet />
+          </Suspense>
+          <CamperBookingForm />
+        </div>
       </Container>
     </div>
   );

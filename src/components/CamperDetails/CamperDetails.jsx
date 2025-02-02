@@ -1,9 +1,8 @@
 import css from "./CamperDetails.module.css";
-import { useId, useState } from "react";
+import { useState } from "react";
 import Icon from "../../helpers/Icon/Icon";
 
 const CamperDetails = ({ camper }) => {
-  const key = useId();
   const [selectedImage, setSelectedImage] = useState(null);
   const openImage = (image) => {
     setSelectedImage(image);
@@ -35,7 +34,7 @@ const CamperDetails = ({ camper }) => {
       <ul className={css.galleryList}>
         {camper.gallery.map((image, i) => (
           <li
-            key={`${key}-${i}`}
+            key={`${camper.name}-${i}`}
             className={css.galleryItem}
             onClick={() => openImage(image.original)}
           >

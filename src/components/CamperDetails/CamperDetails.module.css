@@ -100,12 +100,11 @@
   right: 10px;
   background-color: #dadde1;
   border: none;
-
   cursor: pointer;
   width: 32px;
   height: 32px;
   border-radius: 10px;
-  stroke: #ffc531;
+  stroke: #475467;
 }
 
 .description {

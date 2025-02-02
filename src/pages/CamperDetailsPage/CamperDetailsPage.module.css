@@ -1,3 +1,44 @@
 .pageWrapper {
   padding: 48px 0 80px 0;
 }
+
+.nav {
+  display: flex;
+  gap: 40px;
+  height: 48px;
+  margin-bottom: 44px;
+  border-bottom: 1px solid #dadde1;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.link {
+  transition: all 350ms linear;
+  height: 100%;
+}
+.active {
+  position: relative;
+  transition: all 350ms linear;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #e44848;
+}
+
+.link:hover,
+.link:focus {
+  color: #e44848;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 631px 631px;
+  column-gap: 40px;
+}

@@ -1,0 +1,113 @@
+.react-datepicker {
+  font-family: Inter, sans-serif;
+  border-color: #475467;
+  border-radius: 12px;
+  width: 276px;
+  overflow: hidden;
+}
+
+.react-datepicker__header {
+  width: 100%;
+  padding: 12px;
+  height: 74px;
+  background-color: #fff;
+}
+
+.react-datepicker__month-container {
+  width: 100%;
+}
+
+.react-datepicker__navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  top: 12px;
+  fill: #475467;
+  width: 24px;
+  height: 24px;
+}
+
+.react-datepicker__navigation--previous {
+  left: 12px;
+}
+
+.react-datepicker__navigation--next {
+  right: 12px;
+}
+
+.react-datepicker__day-names {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.react-datepicker__month {
+  width: 100%;
+  padding: 12px;
+  background-color: #fff;
+  margin: 0;
+}
+
+.react-datepicker__week {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.react-datepicker__current-month {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+  color: #101828;
+}
+
+h2.react-datepicker__current-month {
+  margin-bottom: 15px;
+}
+
+.react-datepicker__day-name {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.2;
+  text-align: center;
+  color: #475467;
+  text-transform: uppercase;
+}
+
+.react-datepicker__day {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #101828;
+  transition: all 250ms linear;
+}
+
+.react-datepicker__day--outside-month {
+  color: #475467;
+}
+
+.react-datepicker__day--today {
+  border-radius: 32px;
+}
+
+.react-datepicker__day--keyboard-selected {
+  background-color: #dadde1;
+  border-radius: 32px;
+}
+
+.react-datepicker__day--selected {
+  background-color: #475467;
+  border-radius: 32px;
+  color: #f7f7f7;
+}
+
+.react-datepicker__day:not([aria-disabled="true"]):hover,
+.react-datepicker__month-text:not([aria-disabled="true"]):hover,
+.react-datepicker__quarter-text:not([aria-disabled="true"]):hover,
+.react-datepicker__year-text:not([aria-disabled="true"]):hover {
+  background-color: #475467;
+  border-radius: 32px;
+  color: #f7f7f7;
+}

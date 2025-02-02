@@ -17,7 +17,7 @@ const CampersList = () => {
 
   return (
     <section>
-      <h2 className={css.visuallyHidden}>All Campers</h2>
+      <h2 className="visuallyHidden">All Campers</h2>
       {isLoading && <Loader />}
       {isError && (
         <ErrorMessage

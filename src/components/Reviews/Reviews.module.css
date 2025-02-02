@@ -1,0 +1,48 @@
+.reviewList {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.reviewTop {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.reviewAvatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f2f4f7;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  color: #e44848;
+}
+
+.reviewTitle {
+  margin-bottom: 4px;
+}
+
+.reviewRating {
+  display: flex;
+  gap: 4px;
+}
+
+.star {
+  fill: #f2f4f7;
+}
+
+.star.filled {
+  fill: #ffc531;
+}
+
+.reviewComment {
+  font-weight: 400;
+  color: #475467;
+}

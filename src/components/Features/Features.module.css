@@ -1,0 +1,32 @@
+.sectionFeatures {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 44px 52px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  height: 588px;
+  width: 100%;
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.detailsList {
+  border-top: 1px solid #dadde1;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detailsItem {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  text-transform: capitalize;
+}
