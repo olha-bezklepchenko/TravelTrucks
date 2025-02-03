@@ -1,5 +1,6 @@
 {
   "name": "react-swc",
+  "author": "Bezklepchenko Olha <olgabezkl@gmail.com>",
   "private": true,
   "version": "0.0.0",
   "type": "module",
