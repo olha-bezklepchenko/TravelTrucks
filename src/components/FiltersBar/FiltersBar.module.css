@@ -150,3 +150,8 @@
 .radio:checked + .label {
   border-color: #e44848;
 }
+
+.buttons {
+  display: flex;
+  gap: 28px;
+}

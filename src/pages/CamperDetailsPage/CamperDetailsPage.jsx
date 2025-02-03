@@ -35,27 +35,31 @@ const CamperDetailsPage = () => {
             message="Unable to load camper details. Please try again later."
           />
         )}
-        {camper && <CamperDetails camper={camper} />}
-        <div className={css.nav}>
-          <NavLink
-            to="features"
-            className={({ isActive }) => (isActive ? css.active : css.link)}
-          >
-            Features
-          </NavLink>
-          <NavLink
-            to="reviews"
-            className={({ isActive }) => (isActive ? css.active : css.link)}
-          >
-            Reviews
-          </NavLink>
-        </div>
-        <div className={css.gridContainer}>
-          <Suspense fallback={<Loader />}>
-            <Outlet />
-          </Suspense>
-          <CamperBookingForm />
-        </div>
+        {camper && (
+          <div>
+            <CamperDetails camper={camper} />
+            <div className={css.nav}>
+              <NavLink
+                to="features"
+                className={({ isActive }) => (isActive ? css.active : css.link)}
+              >
+                Features
+              </NavLink>
+              <NavLink
+                to="reviews"
+                className={({ isActive }) => (isActive ? css.active : css.link)}
+              >
+                Reviews
+              </NavLink>
+            </div>
+            <div className={css.gridContainer}>
+              <Suspense fallback={<Loader />}>
+                <Outlet />
+              </Suspense>
+              <CamperBookingForm />
+            </div>
+          </div>
+        )}
       </Container>
     </div>
   );

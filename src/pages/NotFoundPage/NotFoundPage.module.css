@@ -1,0 +1,12 @@
+.container {
+  height: 90vh;
+  width: 100vw;
+  background: linear-gradient(to right, white, lightskyblue, white);
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  object-fit: cover;
+  min-height: 50vh;
+}

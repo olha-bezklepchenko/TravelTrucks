@@ -1,6 +1,6 @@
 import * as Yup from "yup";
 
-export const validationSchema = Yup.object({
+export const validationBookingSchema = Yup.object({
   name: Yup.string()
     .min(2, "The name is too short")
     .max(50, "The name is too long")

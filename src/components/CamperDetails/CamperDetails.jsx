@@ -46,7 +46,6 @@ const CamperDetails = ({ camper }) => {
           </li>
         ))}
       </ul>
-      {/* Модальне вікно для зображення */}
       {selectedImage && (
         <div className={css.modal} onClick={closeImage}>
           <div

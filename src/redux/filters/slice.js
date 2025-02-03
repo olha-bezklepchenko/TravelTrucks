@@ -13,8 +13,11 @@ const slice = createSlice({
     changeFilters(state, action) {
       return { ...state, ...action.payload };
     },
+    resetFilters() {
+      return initialState;
+    },
   },
 });
 
-export const { changeFilters } = slice.actions;
+export const { changeFilters, resetFilters } = slice.actions;
 export default slice.reducer;

@@ -5,9 +5,7 @@
   flex-direction: column;
   text-align: center;
   border-radius: 12px;
-  box-shadow: var(--shadow-light);
   padding: 10px;
-  color: var(--color-primary);
   height: 15vh;
   min-height: 75px;
 }
@@ -18,7 +16,6 @@
 }
 
 .errorMessage {
-  font-style: italic;
   font-size: 16px;
 }
 

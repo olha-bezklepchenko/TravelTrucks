@@ -1,12 +1,21 @@
 import { Formik, Form, Field } from "formik";
-import { useDispatch, useSelector } from "react-redux";
-import { changeFilters } from "../../redux/filters/slice";
-import { selectAvailableLocations } from "../../redux/campers/selectors";
+import { useDispatch } from "react-redux";
+import { changeFilters, resetFilters } from "../../redux/filters/slice";
 import { useState } from "react";
 import Icon from "../../helpers/Icon/Icon.jsx";
 import SubmitButton from "../SubmitButton/SubmitButton.jsx";
-
+import ResetButton from "../ResetButton/ResetButton";
 import css from "./FiltersBar.module.css";
+
+const locations = [
+  "Kyiv, Ukraine",
+  "Poltava, Ukraine",
+  "Dnipro, Ukraine",
+  "Odesa, Ukraine",
+  "Kharkiv, Ukraine",
+  "Sumy, Ukraine",
+  "Lviv, Ukraine",
+];
 
 const initialValues = {
   location: "",
@@ -16,12 +25,12 @@ const initialValues = {
 
 const FiltersBar = () => {
   const dispatch = useDispatch();
-  const locations = useSelector(selectAvailableLocations);
   const [showLocations, setShowLocations] = useState(false);
+  const [isSubmited, setIsSubmited] = useState(false);
 
-  const handleSubmit = (values, { setSubmitting }) => {
+  const handleSubmit = (values) => {
     dispatch(changeFilters(values));
-    setSubmitting(false);
+    setIsSubmited(true);
   };
 
   const handleLocationSelect = (loc, setFieldValue) => {
@@ -29,10 +38,16 @@ const FiltersBar = () => {
     setShowLocations(false);
   };
 
+  const handleReset = (resetForm) => {
+    dispatch(resetFilters());
+    resetForm();
+    setIsSubmited(false);
+  };
+
   return (
     <section className={css.filtersWrapper}>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-        {({ setFieldValue }) => (
+        {({ setFieldValue, resetForm }) => (
           <Form className={css.filtersBar}>
             <div className={css.locationWrapper}>
               <label className={css.locationLabel}>
@@ -185,7 +200,15 @@ const FiltersBar = () => {
               </div>
             </div>
 
-            <SubmitButton>Search</SubmitButton>
+            <div className={css.buttons}>
+              <SubmitButton>Search</SubmitButton>
+
+              {isSubmited && (
+                <ResetButton onClick={() => handleReset(resetForm)}>
+                  Reset
+                </ResetButton>
+              )}
+            </div>
           </Form>
         )}
       </Formik>

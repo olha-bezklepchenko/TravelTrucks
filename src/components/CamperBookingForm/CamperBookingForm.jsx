@@ -1,5 +1,5 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import { validationSchema } from "../../helpers/validationsSchems.js";
+import { validationBookingSchema } from "../../helpers/validationsSchems.js";
 import DatePicker from "react-datepicker";
 import css from "./CamperBookingForm.module.css";
 import "react-datepicker/dist/react-datepicker.css";
@@ -29,7 +29,7 @@ const CamperBookingForm = () => {
       </p>
       <Formik
         initialValues={initialValues}
-        validationSchema={validationSchema}
+        validationSchema={validationBookingSchema}
         onSubmit={handleSubmit}
       >
         <Form className={css.form}>
