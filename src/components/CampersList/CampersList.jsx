@@ -29,7 +29,6 @@ const CampersList = () => {
   const totalPages = Math.ceil(total / 4);
 
   const queryParams = formatQueryParams(filters);
-  console.log(queryParams);
 
   useEffect(() => {
     dispatch(fetchCampers({ page, queryParams }));
