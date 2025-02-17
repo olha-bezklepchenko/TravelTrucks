@@ -31,8 +31,15 @@ const CampersList = () => {
   const queryParams = formatQueryParams(filters);
 
   useEffect(() => {
+    if (campers.length >= page * 4) {
+      return;
+    }
+
+    if (campers.length > 0 && campers.length === total) return;
+
+    if (isError) return;
     dispatch(fetchCampers({ page, queryParams }));
-  }, [dispatch, page, queryParams]);
+  }, [dispatch, page, queryParams, campers.length, total, isError]);
 
   const handleLoadMore = () => {
     dispatch(nextPage());

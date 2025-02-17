@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import { Toaster } from "react-hot-toast";
 import { Suspense, lazy } from "react";
@@ -23,7 +23,7 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<CatalogPage />} />
           <Route path="/catalog/:id" element={<CamperDetailsPage />}>
-            <Route index element={<Features />} />
+            <Route index element={<Navigate to="features" replace />} />
             <Route path="features" element={<Features />} />
             <Route path="reviews" element={<Reviews />} />
           </Route>

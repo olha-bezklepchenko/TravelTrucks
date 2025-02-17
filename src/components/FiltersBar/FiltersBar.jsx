@@ -1,11 +1,14 @@
 import { Formik, Form, Field } from "formik";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { changeFilters, resetFilters } from "../../redux/filters/slice";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Icon from "../../helpers/Icon/Icon.jsx";
 import SubmitButton from "../SubmitButton/SubmitButton.jsx";
 import ResetButton from "../ResetButton/ResetButton";
 import css from "./FiltersBar.module.css";
+import { selectTotal } from "../../redux/campers/selectors.js";
+import { toastSuccess } from "../../helpers/toastConfig";
+import { resetState } from "../../redux/campers/slice.js";
 
 const locations = [
   "Kyiv, Ukraine",
@@ -27,10 +30,13 @@ const FiltersBar = () => {
   const dispatch = useDispatch();
   const [showLocations, setShowLocations] = useState(false);
   const [isSubmited, setIsSubmited] = useState(false);
+  const [prevTotal, setPrevTotal] = useState(null);
+  const total = useSelector(selectTotal);
 
   const handleSubmit = (values) => {
     dispatch(changeFilters(values));
     setIsSubmited(true);
+    setPrevTotal(total);
   };
 
   const handleLocationSelect = (loc, setFieldValue) => {
@@ -40,9 +46,19 @@ const FiltersBar = () => {
 
   const handleReset = (resetForm) => {
     dispatch(resetFilters());
+    dispatch(resetState());
     resetForm();
     setIsSubmited(false);
   };
+
+  useEffect(() => {
+    if (isSubmited && total !== prevTotal) {
+      if (total > 0) {
+        toastSuccess(`${total} campers found!`);
+      }
+      return;
+    }
+  }, [total, isSubmited, prevTotal]);
 
   return (
     <section className={css.filtersWrapper}>

@@ -29,7 +29,7 @@ const CamperDetails = ({ camper }) => {
             <p>{camper.location}</p>
           </div>
         </div>
-        <p className={css.price}> &#8364;{camper.price}</p>
+        <p className={css.price}> &#8364;{camper.price}.00</p>
       </div>
       <ul className={css.galleryList}>
         {camper.gallery.map((image, i) => (
@@ -43,6 +43,7 @@ const CamperDetails = ({ camper }) => {
               alt={`Camper ${camper.name}view ${i + 1}`}
               className={css.galleryImage}
             />
+            <Icon id="icon-glass-plus" w="32" h="32" className={css.plus} />
           </li>
         ))}
       </ul>

@@ -7,8 +7,6 @@ import Loader from "../Loader/Loader.jsx";
 const Features = () => {
   const camper = useSelector(selectCamperById);
 
-  console.log(camper);
-
   if (!camper) {
     return <Loader />;
   }

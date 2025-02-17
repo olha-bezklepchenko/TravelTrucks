@@ -27,6 +27,22 @@
   display: flex;
   gap: 32px;
 }
+.link:hover,
+.link:focus {
+  position: relative;
+  transition: all 350ms linear;
+}
+
+.link:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  border-radius: 8px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #e44848;
+}
 
 .active {
   color: #d84343;

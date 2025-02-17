@@ -2,7 +2,7 @@
 
 ## Project Description
 
-TravelTrucks is a web application for browsing, filtering, and booking campers. Users can select campers based on location, body type, and additional features. Filtering is performed on the server, and the application state is managed using Redux.
+TravelTrucks is a web application for browsing, filtering, and booking campers. Users can select campers based on location, body type, and additional features.
 
 ## Features
 
@@ -56,7 +56,7 @@ Email: [olgabezkl@gmail.com](mailto:olgabezkl@gmail.com)
 
 ## Опис проекту
 
-TravelTrucks – це веб-застосунок для перегляду, фільтрації та замовлення кемперів. Користувач може обирати кемпери за місцем розташування, типом кузова та додатковими характеристиками. Фільтрація виконується на сервері, а стан застосунку керується за допомогою Redux.
+TravelTrucks – це веб-застосунок для перегляду, фільтрації та замовлення кемперів. Користувач може обирати кемпери за місцем розташування, типом кузова та додатковими характеристиками.
 
 ## Функціонал
 

@@ -12,7 +12,7 @@ const CamperItem = ({ camper }) => {
       <div className={css.imageWrapper}>
         <img
           className={css.image}
-          src={camper.gallery[0].original}
+          src={camper.gallery[0].thumb}
           alt={camper.name}
         />
       </div>
@@ -20,7 +20,7 @@ const CamperItem = ({ camper }) => {
         <div className={css.titleWrapper}>
           <div className={css.infoTop}>
             <h3 className={css.title}>{camper.name}</h3>
-            <p className={css.price}> &#8364;{camper.price}</p>
+            <p className={css.price}> &#8364;{camper.price}.00</p>
             <FavoriteButton id={camper.id} />
           </div>
           <div className={css.infoBottom}>
