@@ -37,7 +37,6 @@ const CampersList = () => {
 
     if (campers.length > 0 && campers.length === total) return;
 
-    if (isError) return;
     dispatch(fetchCampers({ page, queryParams }));
   }, [dispatch, page, queryParams, campers.length, total, isError]);
 
